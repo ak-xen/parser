@@ -2,7 +2,6 @@ import json
 import time
 
 import requests
-from selenium import webdriver
 from bs4 import BeautifulSoup
 from config import cookies, headers
 
@@ -69,6 +68,7 @@ def get_data():
 
             products_list.append(all_products_info)
             print(f'Element number {element} was loading!!!')
+            time.sleep(2)
 
         print('#' * 15)
         print(f'Page number {pagination} was loaded!!!')
